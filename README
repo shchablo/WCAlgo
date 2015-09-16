@@ -1,0 +1,31 @@
+Program: WCAlgo
+--------------------------------------------------------------------------------
+
+Description:
+  
+  Analysis weigth convolution algorithm for ADC. 
+--------------------------------------------------------------------------------
+
+Content:
+  
+  makefile	  : MakeFile for build program
+  main.C	  : main file
+
+  source	  : Source files
+  include	  : Include files
+--------------------------------------------------------------------------------
+
+System Requirements:
+
+  - ROOT CERN Library (https://root.cern.ch)
+--------------------------------------------------------------------------------
+
+Syntax: for help execute: ./WCAlgo
+
+--------------------------------------------------------------------------------
+
+Support:
+
+  Shchablo@gmail.com
+--------------------------------------------------------------------------------
+
