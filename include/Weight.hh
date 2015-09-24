@@ -35,7 +35,7 @@ protected:
   void middleSignal(int channel, vector<float> *data, vector<float> *time,
                     float *midData, float *midTime,
                     unsigned short int midLength,
-                    unsigned long int firstNumEvent, unsigned long int lastNumEven);
+                    unsigned long int firstNumEvent, unsigned long int lastNumEvenz);
 
 };
 

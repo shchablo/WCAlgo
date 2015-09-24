@@ -137,7 +137,7 @@ bool Analysis::loop(int channel, unsigned long int firstNumEvent, unsigned long 
   float weightsIntegrals[graphs.size()];
   TH1F *wh[graphs.size()];
   for(unsigned short int i = 0; i < graphs.size(); i++) {
-    wh[i] = new TH1F (Form("integral_%s", graphs[i]->GetName()), Form("integral_%s", graphs[i]->GetName()), 300, 1, -1);
+    wh[i] = new TH1F (Form("integral_%s", graphs[i]->GetName()), Form("integral_%s_gate=%.1f-%.1f", graphs[i]->GetName(), firstGate, lastGate), 300, 1, -1);
     wh[i]->GetXaxis()->SetTitle("integral");
     wh[i]->GetYaxis()->SetTitle("Counts");
     wh[i]->GetYaxis()->SetTitleOffset(1.6);
@@ -185,7 +185,7 @@ bool Analysis::loop(int channel, unsigned long int firstNumEvent, unsigned long 
   for(unsigned short int n = 0; n < graphs.size(); n++) {
     graphWeight[n] = new TGraph(midLength, timeWeight[n], weight[n]);
     graphWeight[n]->SetName(graphs[n]->GetName());
-    graphWeight[n]->SetTitle(graphs[n]->GetName());
+    graphWeight[n]->SetTitle(Form("%s_gate=%.1f-%.1f", graphs[n]->GetName(), firstGate, lastGate));
     graphWeight[n]->GetXaxis()->SetTitle("time, ns");
     graphWeight[n]->GetYaxis()->SetTitle("weight");
     writeObject("", graphWeight[n]);
